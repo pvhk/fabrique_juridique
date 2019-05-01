@@ -18,7 +18,7 @@
             </div>
             <p class="subtitle">Remplissez ce formulaire pour calculer sans frais les indemnités que vous pourriez toucher lors d’une rupture conventionnelle</p>
         </div>
-        <form class="calcul_form" method="POST" action="http://localhost:8000/calcul">
+        <form class="calcul_form" method="POST" action="/calcul">
             {% csrf_token %}
             <p class="calcul_form_title">Votre profession</p>
             <div class="calcul_form_ctnr calcul_form_desktop">

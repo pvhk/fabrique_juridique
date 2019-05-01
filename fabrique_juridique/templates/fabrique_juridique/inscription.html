@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="formWrap">
-                <form action="http://localhost:8000/createuser" method="post">
+                <form action="/createuser" method="post">
                     {% csrf_token %}
                     <label for="entreprise">Entreprise</label>
                     <input class="input input-gray" type="text" name="entreprise" id="entreprise">
