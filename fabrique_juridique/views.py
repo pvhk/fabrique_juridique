@@ -48,7 +48,7 @@ def calcul(request):
             result = (average * 1/4) * anciennete
         return render(request,'fabrique_juridique/global/mathieu.html', {"result":round(result,0),"average":round(average,0)})
     except:
-        return render(request, 'fabrique_juridique/calculateur.html')
+        return redirect('/calculateur')
 def logout_user(request):
     logout(request)
     return redirect('/')
