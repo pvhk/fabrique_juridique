@@ -1,1 +1,1 @@
-web: gunicorn fabrique_juridique:app
+web: gunicorn fb:wsgi
