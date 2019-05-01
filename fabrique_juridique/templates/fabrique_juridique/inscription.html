@@ -1,0 +1,80 @@
+{% extends "fabrique_juridique/global/header.html" %}
+{% load staticfiles%}
+{% block content%}
+
+    <div class="wrap inscription">
+        <h1 class="marginTitle" style="margin-top:50px">Inscrivez-vous</h1>
+        <p class="marginTitle subtitle">Et démarrez votre procédure de rupture conventionnelle dès maintenant</p>
+        <div class="subscribeContent">
+            <div class="infoWrap">
+                <h2 class="subtitle">Vous êtes intéressé par</h2>
+                <div class="formule">
+                    <p class="formuleName">Formule Standard</p>
+                    <p class="formulePrice">24<span>,99€ TTC</span></p>
+                    <p>Automatisez et optimisez votre démarche</p>
+                </div>
+                <div class="detail">
+                    <ul class="list-dot">
+                        <li><span>Calendrier de gestion</span></li>
+                        <li>
+                            <span><b>Signature électronique</b> avec authentification <b>via un mot de passe</b></span>
+                        </li>
+                        <li>
+                            <span><b>Télétransmission automatique</b> à la DIRECCTE</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="formWrap">
+                <form action="http://localhost:8000/createuser" method="post">
+                    {% csrf_token %}
+                    <label for="entreprise">Entreprise</label>
+                    <input class="input input-gray" type="text" name="entreprise" id="entreprise">
+                    <div class="divider">
+                        <div class="miniWrapper nomWrapper">
+                            <label for="nom">Nom</label>
+                            <input class="input input-gray" type="text" name="lastname" id="Nom">
+                        </div>
+                        <div class="miniWrapper prenomWrapper">
+                            <label for="prenom">Prénom</label>
+                            <input class="input input-gray" type="text" name="firstname" id="prenom">
+                        </div>
+                    </div>
+                    <div class="divider">
+                        <div class="miniWrapper telWrapper">
+                            <label for="tel">Téléphone</label>
+                            <input class="input input-gray" type="tel" id="tel">
+
+                        </div>
+                        <div class="miniWrapper secteurWrapper">
+                            <label for="secteur">Secteur</label>
+                            <input class="input input-gray" type="text" id="secteur">
+                        </div>
+                    </div>
+                    <label for="mail">Email professionnel</label>
+                    {% if emailnext is not None%}                    
+                    <input class="input input-gray" type="email" name="email" id="mail" value="{{emailnext}}">
+                    {% else %} 
+                    <input class="input input-gray" type="email" name="email" id="mail">
+                    {% endif %} 
+                    <label for="pass">Mot de passe</label>
+                    <div class="input-img">
+                        <input class="input input-gray" type="password" name="password" id="pass">
+                        <div class="password">
+                            <span class="fas fa-eye"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="isProtected">
+                        <label for="protected" class="checkbox">
+                            <input type="checkbox" id="protected" class="hidden">
+                            <span class="label"></span>
+                            <p>L'employé concerné par la démarche est protégé</p>
+                        </label>
+                    </div>
+                        <button id="sendFormInscription" class="btn btn-orange" type="submit" value="S'inscrire" style="margin-bottom:50px">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+</div>
+    {% endblock %}

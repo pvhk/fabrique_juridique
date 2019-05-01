@@ -1,0 +1,158 @@
+{% extends "fabrique_juridique/global/header.html" %}
+{% load staticfiles%}
+{% block content%}
+<div id="demarches" class="wrap">
+    <section id="breadcrumb">
+        <g>Mes démarches /</g> Rupture conventionnelle de Jean Michel
+    </section>
+    <section id="tdp" class="flexed spb">
+        <div class="wrapperTitre">
+            <div class="titre">
+                <h1>Rupture conventionelle</h1>
+            </div>
+            <div class="date">Créée le 23 juin 2018</div>
+        </div>
+        <div class="params"><img src="{% static 'fabrique_juridique/images/icon_cog.png'%}"></div>
+    </section>
+    <section id="progressline" class="backRad">
+        <div class="tasks flexed spb">
+            <div class="maintenant">Délai de rétractation 1</div>
+            <div class="aVenir flexed spb">
+                <p>A venir : Télétransmission du document à la DIRECCTE</p>
+                <img src="{% static 'fabrique_juridique/images/icon_history.png'%}">
+                <img src="{% static 'fabrique_juridique/images/icon_alert.png'%}">
+                <img src="{% static 'fabrique_juridique/images/icon_exclamation.png'%}">
+            </div>
+        </div>
+        <div class="progressbar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <p class="tRight"><g>Fin du contract estimée</g></p>
+        <p class="tRight">23 août 2018</p>
+    </section>
+    <section id="infos" class="flexed spb">
+        <div id="infoDocs">
+            <div class="info backRad">
+                <p><img src="{% static 'fabrique_juridique/images/icon_info.png'%}"> Vous n'avez pas activé la transmission automatique de votre
+                    document CERFA, <g>activez-la dès maintenant</g>.</p>
+            </div>
+            <div class="suiviDocs backRad">
+                <h3>Documents</h3>
+                <div class="docTitleWrap">
+                    <p>Entretien individuel avec le salarié</p>
+                    <div class="docWrap flexed backRadW">
+                        <img src="{% static 'fabrique_juridique/images/icon_file.png'%}">
+                        <div class="fileIconWrapper flexed spb">
+                            <div class="infoFileWrapper">
+                                <p>Compte rendu individuel</p>
+                                <p>Créé le 23 juin 2018</p>
+                            </div>
+                            <div class="iconsFileWrap flexed">
+                                <img src="{% static 'fabrique_juridique/images/icon_pen.png'%}" class="edit">
+                                <img src="{% static 'fabrique_juridique/images/icon_download.png'%}" class="download">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="docTitleWrap">
+                    <p>Entretien individuel avec le salarié</p>
+                    <div class="docWrap flexed backRadW">
+                        <img src="{% static 'fabrique_juridique/images/icon_file.png'%}">
+                        <div class="fileIconWrapper flexed spb">
+                            <div class="infoFileWrapper">
+                                <p>Compte rendu individuel</p>
+                                <p>Créé le 23 juin 2018</p>
+                            </div>
+                            <div class="iconsFileWrap flexed">
+                                <img src="{% static 'fabrique_juridique/images/icon_pen.png'%}" class="edit">
+                                <img src="{% static 'fabrique_juridique/images/icon_download.png'%}" class="download">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="docTitleWrap">
+                    <p>Entretien individuel avec le salarié</p>
+                    <div class="docWrap flexed backRadW">
+                        <img src="{% static 'fabrique_juridique/images/icon_file.png'%}">
+                        <div class="fileIconWrapper flexed spb">
+                            <div class="infoFileWrapper">
+                                <p>Compte rendu individuel</p>
+                                <p>Créé le 23 juin 2018</p>
+                            </div>
+                            <div class="iconsFileWrap flexed">
+                                <img src="{% static 'fabrique_juridique/images/icon_pen.png'%}" class="edit">
+                                <img src="{% static 'fabrique_juridique/images/icon_download.png'%}" class="download">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="infoDetails">
+            <div class="details flexed spb">
+                <div class="salarie backRad">
+                    <h3>Détails salarié</h3>
+                    <div class="contentWrapper oddSystem">
+                        <p>Nom</p>
+                        <p>Jean</p>
+                        <p>Prénom</p>
+                        <p>Michel</p>
+                        <p>Poste</p>
+                        <p>Agent de sécurité</p>
+                        <p>Ancienneté</p>
+                        <p>3 ans et 8 mois</p>
+                    </div>
+                </div>
+                <div class="procedure backRad">
+                    <h3>Détails procédure</h3>
+                    <div class="contentWrapper oddSystem">
+                        <p>Création</p>
+                        <p>23 Juin 2018</p>
+                        <p>Indemnités</p>
+                        <p>750 €</p>
+                        <p>Motif</p>
+                        <p>Déménagement dans la ville de Marseille</p>
+                    </div>
+                </div>
+            </div>
+            <div class="avocat flexed spb backRad">
+                <div class="rdv">
+                    <h3>Votre avocat</h3>
+                    <g>Prochain rendez-vous</g>
+                    <p>Vous n'avez aucun rendez-vous programmé avec Maître Julio</p>
+                    <g>Historique des rendez-vous</g>
+                    <div class="docTitleWrap">
+                        <div class="docWrap flexed backRadW">
+                            <img src="{% static 'fabrique_juridique/images/icon_file.png'%}">
+                            <div class="fileIconWrapper flexed spb">
+                                <div class="infoFileWrapper">
+                                    <p>Compte rendu</p>
+                                    <p>Créé le 23 juin 2018</p>
+                                </div>
+                                <div class="iconsFileWrap flexed">
+                                    <img src="{% static 'fabrique_juridique/images/icon_pen.png'%}" class="edit">
+                                    <img src="{% static 'fabrique_juridique/images/icon_download.png'%}" class="download">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="futurRdv">
+                    <g>Prendre un rendez-vous avec Maître Julio</g>
+                    <form action="">
+                        <div class="wrapper flexed">
+                            <input class="input" type="date" name="inputDate" id="inputDate" placeholder="Date">
+                            <input class="input" type="time" name="inputHeure" id="inputHeure" placeholder="Heure">
+                        </div>
+                        <button class="btn btn-orange" type="submit">Demander un rendez-vous</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

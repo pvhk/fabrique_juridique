@@ -1,0 +1,26 @@
+{% extends "fabrique_juridique/global/header.html" %}
+{% load staticfiles%}
+{% block content%}
+
+<section id="resultat" style="margin-top:150px; margin-bottom:150px">
+    <div class="container">
+        <div class="container-montant">
+            <p>
+                Voici le résultat du calcul de vos indemnités de rupture conventionnelle pour une base de salaire à
+                {{average}}€ :
+            </p>
+            <p class="montant">
+                {{result}} €
+            </p>
+            <p class="demarrer"><a href="">Démarrer une rupture conventionnelle</a></p>
+        </div>
+        <div>
+            <p class="reception">Vous souhaitez recevoir le détail du calcul par email ? C'est possible !</p>
+            <div class="input">
+                <input class="input input-gray" type="text" placeholder="Quelle est votre adresse email ?" />
+                <div class="btn btn-orange"><a href="">Valider</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

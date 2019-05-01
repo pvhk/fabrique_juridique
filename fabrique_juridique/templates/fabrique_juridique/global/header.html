@@ -1,0 +1,112 @@
+{% load static%}
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>La fabrique juridique - Votre rupture conventionnelle en ligne</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{%static 'fabrique_juridique/reset.css'%}">
+    <link rel="stylesheet" href="{%static 'fabrique_juridique/style.css'%}">
+    <link rel="stylesheet" href="{%static 'fabrique_juridique/design_system.css'%}">
+    <link rel="stylesheet" href="{%static 'fabrique_juridique/header.css'%}">
+    <link rel="stylesheet" href="{%static 'fabrique_juridique/footer.css'%}">
+
+</head>
+    <header>
+        <div class="wrap">
+            <a class="logo" href="{% url 'index'%}">
+                <img src="{%static 'fabrique_juridique/images/logo_rupture_conventionnelle.svg'%}" alt="">
+            </a>
+            <button class="toggle">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </button>
+            <ul class="mobile_menu">
+                <li>
+                    <a href="#">La rupture conventionnelle</a>
+                </li>
+                <li>
+                    <a href="{% url 'calculateur'%}">Calculateur</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li class="header_btn">
+                    <a href="{% url 'connexion'%}">Espace client</a>
+                </li>
+            </ul>
+            <ul class="desktop_menu">
+                <li>
+                    <a href="#">La rupture conventionnelle</a>
+                </li>
+                <li>
+                    <a href="{% url 'calculateur'%}">Calculateur</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                {% if user.is_authenticated %}
+                    <li style="color:#386FA4"><a href="{% url 'demarche' %}">{{user.first_name}} <i class="fas fa-caret-down"></i> </a></li>
+                    <li style="color:#386FA4"><a href="{% url 'logoutuser' %}">Déconnexion</a></li>
+                {% else %}
+                <li class="header_btn">
+                    <a href="{% url 'connexion'%}">Espace client</a>
+                </li>
+                {% endif%}
+            </ul>
+        </div>
+    </header>
+
+
+<body>
+    {% block content %} {% endblock %}
+</body>
+    <footer>
+        <div class="siteUrl"><a href="">votreruptureconventionnelle.com</a></div>
+        <div class="linksWrapper">
+            <div class="legal">
+                <ul>
+                    <li><a href="">Politique de confidentialité</a></li>
+                    <li><a href="">Conditions Générales d'Utilisation</a></li>
+                    <li><a href="">Conditions Générales de Vente</a></li>
+                </ul>
+            </div>
+            <div class="client">
+                <ul>
+                    <li><a href="">Espace client</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Mentions légales</a></li>
+                </ul>
+            </div>
+            <div class="pay"><ul>
+                <li><p class='pay-first'>Paiement sécurisé</p><img src="{% static 'fabrique_juridique/images/cadenas.svg'%}" alt="Paiement sécurisé"></li>
+                <li><img src="{% static 'fabrique_juridique/images/visa.svg'%}" alt="visa" class='pay-first'><img src="{% static 'fabrique_juridique/images/mastercard.svg'%}" alt="mastercard"></li>
+            </ul></div>
+        </div>
+        <div class="powered">
+            <p>Powered by La Fabrique Juridique</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="{% static 'fabrique_juridique/js/main.js'%}"></script>
+    <script src="{% static 'fabrique_juridique/js/calculator.js'%}"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>

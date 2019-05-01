@@ -1,0 +1,922 @@
+@charset "UTF-8";
+/* --------------------
+    - inscription start -
+-------------------- */
+
+.inscription {
+    margin: 4rem auto;
+}
+
+.inscription h1, .inscription .subtitle, .inscription h4, .inscription .formule {
+    text-align: center;
+}
+
+.inscription .subtitle {
+    margin-top: 1rem;
+}
+
+.inscription .subscribeContent {
+    margin: 2rem auto 0;
+}
+
+.inscription .infoWrap {
+    background: #f3f7fa;
+    border-radius: 2px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.inscription h2 {
+    font-weight: 600;
+    margin-bottom: 2rem
+}
+
+.inscription .formuleName {
+    font-weight: 600;
+}
+
+.inscription .formulePrice {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.inscription .formulePrice span {
+    display: inline;
+    font-size: 1.2rem;
+}
+
+.inscription .formule, .inscription .detail {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem
+}
+
+.inscription form label {
+    font-weight: 600;
+    margin-bottom: .8rem;
+}
+
+.inscription .input {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.inscription form>.input, .inscription form .miniWrapper .input {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.inscription .infoWrap .formule>p:first-child {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.inscription .infoWrap .formule>p:nth-of-type(2) {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.inscription .detail {
+    margin-top: 2rem
+}
+
+#sendFormInscription {
+    display: block;
+    margin: 4rem auto 0;
+}
+
+@media all and (min-width: 768px) {
+    .inscription .subscribeContent {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    .inscription .infoWrap {
+        width: 48%;
+        margin-bottom: 0;
+    }
+    .inscription .formWrap {
+        width: 48%;
+    }
+    .inscription .divider {
+        display: flex;
+        justify-content: space-between;
+    }
+    .inscription .divider>div {
+        width: 48%;
+    }
+}
+
+/* --------------------
+    - inscription end -
+-------------------- */
+
+/* --------------------
+    - home start -
+-------------------- */
+
+#hero-home {
+    display: flex;
+}
+
+#hero-home .container {
+    width: 92%;
+    margin: auto;
+    align-items: center;
+}
+
+#hero-home .container h1 {
+    margin-top: 150px;
+}
+
+#hero-home .container p {
+    margin-top: 30px;
+}
+
+#hero-home .container .email-address {
+    margin-top: 70px;
+    width: 100%;
+}
+
+#hero-home .container .container-right {
+    display: none;
+}
+
+#hero-home .container .container-left .email-address input {
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+#hero-home .container .container-left .email-address div {
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+}
+
+#avis {
+    margin-top: 150px;
+    background-color: #F3F7FA;
+    display: flex;
+    padding: 30px 0;
+}
+
+#avis .container {
+    margin: auto;
+    width: 85%;
+}
+
+#avis .container .image-avis {
+    margin-top: 0px;
+}
+
+#avis .container .nom-avis {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#avis .container .nom-avis span {
+    margin-left: 10px;
+    text-align: right;
+}
+
+#avis .container .image-avis img {
+    margin: auto;
+}
+
+#avis .container p {
+    margin-top: 20px;
+}
+
+#rupture-conventionnelle {
+    margin-top: 100px;
+}
+
+#rupture-conventionnelle .container {
+    width: 92%;
+    margin: auto;
+    align-items: center;
+}
+
+#rupture-conventionnelle .container .subtitle {
+    margin-top: 10px;
+}
+
+#rupture-conventionnelle .container p {
+    margin-top: 30px;
+}
+
+#rupture-conventionnelle .container .container-right {
+    background-image: url(../images/difference-licenciement.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#rupture-conventionnelle .container .container-right p {
+    font-weight: 600;
+}
+
+.question-orange {
+    color: #FC5E0A;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+#avocats-conseillent {
+    margin-top: 100px;
+}
+
+#avocats-conseillent .container {
+    width: 92%;
+    margin: auto;
+    align-items: center;
+}
+
+#outil-gestion .container {
+    width: 90%;
+    margin: auto;
+    align-items: center;
+}
+
+#avocats-conseillent .container .subtitle {
+    margin-top: 10px;
+}
+
+#avocats-conseillent .container p {
+    margin-top: 30px;
+}
+
+#avocats-conseillent .container .container-left {
+    display: none;
+}
+
+#avocats-conseillent .container .container-left-bis img {
+    width: 100%;
+    margin: 50px 0;
+    float: center;
+    clear: both;
+}
+
+#outil-gestion .container h2 {
+    text-align: center;
+}
+
+#outil-gestion .container .outils-container {
+    margin-top: 50px;
+    background-color: #F3F7FA;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px #ccc;
+}
+
+#outil-gestion .container .outils-flex {
+    display: flex;
+}
+
+#outil-gestion .container .outils-flex img {
+    margin-right: 10px;
+}
+
+#outil-gestion .container p {
+    margin-top: 10px;
+}
+
+#outil-gestion .container .outils .savoir-plus {
+    margin-top: 50px;
+}
+
+#partenaires {
+    margin-top: 150px;
+    background-color: #FAFAFA;
+    padding: 30px;
+    text-align: center;
+}
+
+#partenaires .container {
+    align-items: center;
+}
+
+#partenaires .container .image-partenaires, #partenaires .container .image-partenaires-2, #partenaires .container .image-partenaires-3 {
+    margin: 30px auto;
+}
+
+#partenaires .container .image-partenaires img, #partenaires .container .image-partenaires-2 img, #partenaires .container .image-partenaires-3 img {
+    margin: auto;
+    width: 100%;
+}
+
+#partenaires .container .image-partenaires-2, #partenaires .container .image-partenaires-3 {
+    display: none;
+}
+
+#trouver-prestation {
+    margin: 100px 0;
+    text-align: center;
+}
+
+#trouver-prestation .container {
+    width: 92%;
+    margin: auto;
+    align-items: center;
+}
+
+#trouver-prestation .container .email-address {
+    margin-top: 30px;
+}
+
+#trouver-prestation .container .email-address input {
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+#trouver-prestation .container .email-address div {
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+}
+
+#trouver-prestation .container .questions-prestation {
+    margin-top: 30px;
+}
+
+#trouver-prestation .container .questions-prestation .question-orange {
+    margin-top: 10px;
+}
+
+@media all and (max-width: 768px) {
+    #hero-home .container .email-address .btn {
+        width: 100%;
+    }
+    #outil-gestion .container .outils .savoir-plus {
+        margin-left: auto;
+        display: block;
+    }
+    #trouver-prestation .container .email-address .btn {
+        width: 100%
+    }
+}
+
+@media all and (min-width: 768px) {
+    #hero-home {
+        margin-top: 120px;
+    }
+    #hero-home .container {
+        width: 85%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    #hero-home .container h1 {
+        margin-top: 0px;
+    }
+    #hero-home .container .container-right {
+        display: flex;
+        width: 45%;
+    }
+    #hero-home .container .container-right img {
+        width: 100%;
+        height: 100%;
+    }
+    #hero-home .container .container-left {
+        width: 45%;
+        align-items: center;
+        display: flex;
+    }
+    #hero-home .container .container-left .container-left-center {
+        margin: auto;
+    }
+    #hero-home .container .email-address {
+        margin-top: 70px;
+        width: 100%;
+        display: flex;
+        max-width: 500px;
+        align-items: stretch;
+    }
+    #hero-home .container .container-left .email-address input {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 0%;
+        border-top-right-radius: 0%;
+    }
+    #hero-home .container .container-left .email-address input:placeholder {
+        font-size: 1rem;
+    }
+    #hero-home .container .container-left .email-address div {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    #avis .container {
+        display: flex;
+        width: 50%;
+    }
+    #avis .container .nom-avis {
+        justify-content: left;
+        margin-top: 0px;
+    }
+    #avis .container .avis-text {
+        float: left;
+        margin-left: 30px;
+    }
+    #avis .container .image-avis {
+        display: flex;
+        width: 400px;
+    }
+    #avis .container .image-avis img {
+        width: 100%;
+    }
+    #rupture-conventionnelle .container {
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+    }
+    #rupture-conventionnelle .container .container-left {
+        width: 45%;
+    }
+    #rupture-conventionnelle .container .container-right {
+        width: 45%;
+    }
+    #avocats-conseillent .container {
+        width: 85%;
+        justify-content: space-between;
+        display: flex;
+    }
+    #avocats-conseillent .container .container-left {
+        display: block;
+        width: 40%;
+    }
+    #avocats-conseillent .container .container-right {
+        width: 40%;
+    }
+    #avocats-conseillent .container .container-left-bis {
+        display: none;
+    }
+    #outil-gestion {
+        margin-top: 100px;
+    }
+    #outil-gestion .container .outils .outils-flex-desktop {
+        display: flex;
+        justify-content: space-between;
+    }
+    #outil-gestion .container .outils .outils-flex-desktop .outils-container {
+        width: 30%
+    }
+    #outil-gestion .container .outils .savoir-plus {
+        margin: 50px auto 0;
+    }
+    #outil-gestion .container .outils .bouton-outils-gestion {
+        display: flex;
+    }
+    #partenaires .container .image-partenaires-2, #partenaires .container .image-partenaires-3 {
+        display: block;
+    }
+    #partenaires .container .image-partenaires, #partenaires .container .image-partenaires-2, #partenaires .container .image-partenaires-3 {
+        width: 17%;
+    }
+    #partenaires .container {
+        display: flex;
+        width: 85%;
+        margin: auto;
+        align-items: center;
+        flex: 4;
+    }
+    #trouver-prestation .container .email-address {
+        margin: 70px auto 0px;
+        width: 100%;
+        display: flex;
+        max-width: 700px;
+    }
+    #trouver-prestation .container .email-address input {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 0%;
+        border-top-right-radius: 0%;
+    }
+    #trouver-prestation .container .email-address div {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    #trouver-prestation .questions-prestation {
+        display: flex;
+        margin: auto;
+        max-width: 700px;
+        justify-content: center;
+    }
+    #trouver-prestation .container .questions-prestation .question-orange {
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+}
+
+/* --------------------
+- home end -
+-------------------- */
+
+/* --------------------
+<<<<<<< HEAD
+- calculateur start -
+-------------------- */
+
+.calculateur_hero {
+    margin: 4rem auto;
+}
+
+.calculateur_hero p {
+    margin-top: 1rem;
+}
+
+.calculateur_hero img {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.calcul {
+    margin: 4rem auto;
+}
+
+.calcul_choix .btn-blue-border {
+    margin-top: 1rem
+}
+
+.calcul_choix p {
+    text-align: center;
+    max-width: 50rem;
+    margin: 2rem auto 0;
+}
+
+.calcul_form {
+    margin-top: 4rem;
+}
+
+.calcul_form_title {
+    color: #386fa4;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.calcul_form_ctnr {
+    background: #f3f7fa;
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.calcul_form_input_ctnr label {
+    margin-bottom: .6rem;
+}
+
+.calcul_form_input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 46px;
+    border-radius: 10px;
+    padding: 0 .8rem;
+    font-size: 1rem;
+    color: #121212;
+}
+
+.calcul_form_input::placeholder {
+    color: #707070;
+    font-size: 1rem;
+}
+
+.calcul_form_trio, .calcul_form_duo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calcul_form_input_ctnr .link {
+    margin-top: .2rem;
+    display: block;
+}
+
+.calcul_form_trio input {
+    width: 20%;
+}
+
+.calcul_form_duo input {
+    width: 48%;
+}
+
+.calcul_form_margin {
+    margin-bottom: 1.2rem;
+}
+
+.input_euro_ctnr {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input_euro_ctnr input {
+    width: 100% - 75px;
+    border-radius: 10px 0 0 10px;
+}
+
+.input_euro_ctnr p {
+    width: 75px;
+    height: 46px;
+    border-radius: 0 10px 10px 0;
+    padding: 0 .8rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calcul_form .link {
+    margin-top: .8rem;
+}
+
+.calcul_form_mois {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calcul_form_mois > p {
+    width: 40%;
+}
+
+.calcul_form_mois > div  {
+    width: 60%;
+}
+
+@media all and (min-width: 768px) {
+    .calculateur_hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .calculateur_hero div {
+        width: 45%;
+    }
+    .calculateur_hero img {
+        width: 45%;
+        margin-top: 0;
+    }
+    .calcul_choix div {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .calcul_choix .btn-blue-border {
+        margin-top: 0;
+        margin-left: 1rem;
+    }
+    .calcul_form_desktop {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .calcul_form_desktop .calcul_form_input_ctnr {
+        width: 48%;
+    }
+    .calcul_form_desktop_margin {
+        margin-bottom: 0;
+    }
+    .calcul_form_trio_mois .calcul_form_input_ctnr {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .calcul_form_trio_mois .calcul_form_input_ctnr .calcul_form_mois {
+        width: 31%;
+    }
+}
+/*=======
+- calcul indemnites -
+-------------------- */
+
+#resultat .container {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+}
+
+#resultat .container .container-montant {
+    border-radius: 10px;
+    background-color: #f3f7fa;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#resultat .container .container-montant .montant {
+    color: #fc5e0a;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+#resultat .container .container-montant .demarrer {
+    color: #fc5e0a;
+    font-weight: 600;
+}
+
+#resultat .container .reception {
+    margin-bottom: 30px;
+}
+
+@media all and (max-width: 768px) {
+    #resultat .container .input {
+        border-bottom-left-radius: 0px!important;
+        border-bottom-right-radius: 0px!important;
+    }
+    #resultat .container .btn {
+        border-top-left-radius: 0px!important;
+        border-top-right-radius: 0px!important;
+    }
+}
+
+@media all and (min-width: 768px) {
+    #resultat .container {
+        width: 800px;
+    }
+    #resultat .container .input {
+        display: flex;
+    }
+    #resultat .container .input {
+        border-top-right-radius: 0px!important;
+        border-bottom-right-radius: 0px!important;
+    }
+}
+
+/* --------------------
+- Démarches -
+-------------------- */
+
+#demarches {
+    margin: 0 auto
+}
+#demarches h3 {
+    margin-bottom: 1rem
+}
+#demarches .flexed {
+    display: flex;
+}
+#demarches .spb {
+    justify-content: space-between;
+}
+#demarches .backRad {
+    background: #f4f4f4;
+    border-radius: 10px;
+    padding: 18px;
+}
+#demarches .backRadW {
+    background: #fff;
+    border-radius: 10px;
+    padding: 18px;
+}
+#demarches #infoDocs {
+    flex: 4;
+}
+#demarches #infoDetails {
+    flex: 7;
+}
+#demarches #infoDetails .details .salarie,
+#demarches #infoDocs,
+#demarches .docWrap> img,
+#demarches .iconsFileWrap img:first-of-type {
+    margin-right: 1rem
+}
+#demarches form .wrapper input {
+    margin: .7rem
+}
+#demarches button[type="submit"] {
+    margin: 0 auto;
+    display: block;
+    margin-top: .8rem;
+    text-transform: uppercase;
+}
+#demarches .avocat,
+#demarches #infoDetails,
+#demarches #infoDocs {
+    margin-top: 2rem;
+}
+#demarches #infoDetails .contentWrapper {
+    display: grid;
+    grid: "a b";
+    grid-gap: .5rem 1rem;
+}
+#demarches .oddSystem p:nth-child(odd) {
+    font-weight: bold;
+}
+#demarches #infoDocs .info p>img {
+    display: initial;
+}
+#demarches g {
+    font-weight: bold;
+}
+#demarches #infoDocs g {
+    color: #fc5e0a;
+}
+#demarches #infoDocs .info {
+    border: 2px solid #fc5e0a;
+    margin-bottom: 2rem;
+}
+#demarches .docTitleWrap,
+#demarches .docWrap {
+    font-size: .8em;
+}
+#demarches .fileIconWrapper {
+    width: 100%;
+}
+#demarches img {
+    height: max-content;
+}
+#demarches .iconsFileWrap,
+#demarches .aVenir {
+    align-items: center;
+}
+#demarches .docTitleWrap {
+    margin-bottom: .8rem;
+}
+#demarches .docTitleWrap >p {
+    margin-bottom: .2rem
+}
+#demarches .infoFileWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#demarches .aVenir>* {
+    margin: 0 5px;
+}
+#demarches .progressbar {
+    height: 10px;
+    width: 100%;
+    border-radius: 50px;
+    margin-top: 1.2rem;
+    background: #fff;
+    position: relative;
+}
+#demarches .progressbar:before {
+    content:'';
+    height: 10px;
+    width: 60%;
+    display:block;
+    background-color: #fc5e0a;
+    border-radius: 50px;
+}
+#demarches .progressbar:after {
+    content:'| \A 5 jours avant la fin du délai de rétractation';
+    margin-left: 16%;
+    left: 43%;
+    white-space: pre;
+    position: relative;
+    font-size: .7rem
+}
+#demarches .progressbar span {
+    display:block;
+    width: 10px;
+    height: 10px;
+    border-radius: 30px;
+    position: absolute;
+    z-index: 2;
+    background: #fff;
+    top: 0;
+}
+#demarches .progressbar span:nth-of-type(1) {
+    left: 0
+}
+#demarches .progressbar span:nth-of-type(2) {
+    left: 10%
+}
+#demarches .progressbar span:nth-of-type(3) {
+    left: 35%
+}
+#demarches .progressbar span:nth-of-type(4) {
+    left: 55%
+}
+#demarches .progressbar span:nth-of-type(5) {
+    left: 90%
+}
+#demarches .tRight {
+    text-align: right;
+    font-size: .8rem;
+}
+#demarches .tRight:nth-of-type(1) {
+    margin-top: 1rem
+}
+@media (max-width: 596px) {
+    h1 {
+        margin: 2rem 0;
+    }
+    #demarches .progressbar:after,
+    #demarches .aVenir {
+        display: none;
+    }
+    #demarches #infos,
+    #demarches .details,
+    #demarches .avocat {
+        flex-direction: column;
+    }
+    #demarches #infoDetails .details .salarie, #demarches #infoDocs, #demarches .docWrap> img, #demarches .iconsFileWrap img:first-of-type {
+        margin: 0;
+    }
+    #demarches .details .salarie,
+    #demarches #progressline {
+        margin-bottom: 2rem!important;
+    }
+}

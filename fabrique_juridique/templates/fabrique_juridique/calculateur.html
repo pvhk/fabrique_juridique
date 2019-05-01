@@ -1,0 +1,94 @@
+{% extends "fabrique_juridique/global/header.html" %}
+{% load staticfiles%}
+{% block content%}
+
+    <section class="wrap calculateur_hero">
+        <div>
+            <h1>Calculez vos indemnités</h1>
+            <p class="paragraph">Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini. </p>
+        </div>
+        <img src="{% static 'fabrique_juridique/images/calculateur.png'%}" alt="">
+    </section>
+
+    <section class="wrap calcul" style="margin-bottom:50px">
+        <div class="calcul_choix">
+            <div>
+                <button class="btn btn-blue">Calculateur indemnités</button>
+                <button class="btn btn-blue-border">Comparateur indemnités</button>
+            </div>
+            <p class="subtitle">Remplissez ce formulaire pour calculer sans frais les indemnités que vous pourriez toucher lors d’une rupture conventionnelle</p>
+        </div>
+        <form class="calcul_form" method="POST" action="http://localhost:8000/calcul">
+            {% csrf_token %}
+            <p class="calcul_form_title">Votre profession</p>
+            <div class="calcul_form_ctnr calcul_form_desktop">
+                <div class="calcul_form_input_ctnr calcul_form_margin">
+                    <label for="">Date du début du contrat</label>
+                    <input id="start_date" class="calcul_form_input" type="date">
+                </div>
+                <div class="calcul_form_input_ctnr calcul_form_margin">
+                    <label for="">Date de fin du contrat</label>
+                    <input id="end_date" class="calcul_form_input" type="date">
+                </div>
+                <input id="anciennete" name="anciennete" type="hidden" value="">
+                <div class="calcul_form_input_ctnr calcul_form_margin calcul_form_desktop_margin">
+                    <label for="">Localisation de l'entreprise</label>
+                    <input class="calcul_form_input" type="text">
+                </div>
+                <div class="calcul_form_input_ctnr calcul_form_desktop_margin">
+                    <label for="">Convention collective</label>
+                    <input class="calcul_form_input" type="text">
+                </div>
+            </div>
+            <p class="calcul_form_title">Vos périodes de travail</p>
+            <div class="calcul_form_ctnr calcul_form_desktop">
+                <div class="calcul_form_input_ctnr calcul_form_desktop_margin calcul_form_margin">
+                    <label for="">Période à temps complet</label>
+                    <div class="calcul_form_trio">
+                        <p>De</p>
+                        <input class="calcul_form_input" type="number" placeholder="Mois">
+                        <input class="calcul_form_input" type="number" placeholder="Année">
+                        <p>à</p>
+                        <input class="calcul_form_input" type="number" placeholder="Mois">
+                        <input class="calcul_form_input" type="number" placeholder="Année">
+                    </div>
+                    <a class="link" id="newperiodleft">Ajouter une autre période</a>
+                </div>
+                <div class="calcul_form_input_ctnr">
+                    <label for="">Période à temps partiel</label>
+                    <div class="calcul_form_trio">
+                        <p>De</p>
+                        <input class="calcul_form_input" type="text" placeholder="Mois">
+                        <input class="calcul_form_input" type="text" placeholder="Année">
+                        <p>à</p>
+                        <input class="calcul_form_input" type="text" placeholder="Mois">
+                        <input class="calcul_form_input" type="text" placeholder="Année">
+                    </div>
+                    <a class="link" id="newperiodright">Ajouter une autre période</a>
+                </div>
+            </div>
+            <p class="calcul_form_title">Vos salaires perçues</p>
+            <div class="calcul_form_ctnr">
+                <div class="calcul_form_input_ctnr calcul_form_margin">
+                    <label for="">Montant des primes au cours des 3 derniers mois</label>
+                    <div class="input_euro_ctnr">
+                        <input class="calcul_form_input" type="number" id="montantprimes" type="number">
+                        <p>euros</p>
+                    </div>
+                </div>
+                <div class="calcul_form_trio_mois">
+                    <label class="calcul_form_margin" for="">Rémunération mensuelle brute des 12 derniers mois</label>
+                    <b style="color:red">Il faut séléctionner des dates !</b>
+                </div>
+                <div class="calcul_form_input_ctnr calcul_form_margin calcul_form_desktop_margin">
+                    <label for="">Rémunération mensuelle brute moyenne (moyenne la plus élevée entre les 12 ou 3 derniers mois)</label>
+                    <div class="input_euro_ctnr">
+                        <input class="calcul_form_input" type="text" id="resultcalc" name="average" readonly="readonly">
+                        <p>euros</p>
+                    </div>
+                </div>
+            </div>
+            <div style="width:100%; text-align:center"><button class="btn btn-orange">Calculer mes indemnités</button></div>
+        </form>
+    </section>
+    {% endblock %}

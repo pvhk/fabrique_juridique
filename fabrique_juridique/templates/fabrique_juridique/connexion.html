@@ -1,0 +1,34 @@
+{% extends "fabrique_juridique/global/header.html" %}
+{% load staticfiles%}
+{% block content%}
+
+        <div class="formWrap inscription" style="width:40%">
+                <h2>Connexion</h2>
+                <form action="{% url 'auth'%}" method="post">
+                {% csrf_token %}
+                    <div class="divider">
+                        <div class="miniWrapper nomWrapper">
+                            <label for="username">Email</label>
+                            <input class="input input-gray" type="email" name="email" id="email">
+                        </div>
+                        <div class="miniWrapper prenomWrapper">
+                            <label for="prenom">Mot de passe</label>
+                            <input class="input input-gray" type="password" name="password" id="password">
+                        </div>
+                    </div>
+                    {% if incorrect%}
+                        <p style="color:red;margin-bottom:20px">{{incorrect}}</p>
+                    {% endif %}
+                    <a href="{% url 'inscription'%}" >Je n'ai pas encore de compte</a>
+                    <div class="isProtected"style="margin-top:50px">
+                        <label for="protected" class="checkbox">
+                            <input type="checkbox" id="protected" name="protected" class="hidden">
+                            <span class="label"></span>
+                            <p>Enregistrer ma connexion</p>
+                        </label>
+                    </div>
+                    <button id="sendFormInscription" class="btn btn-orange" type="submit" value="S'inscrire">Connexion</button>
+                </form>
+            </div>
+        </div>
+    {% endblock %}

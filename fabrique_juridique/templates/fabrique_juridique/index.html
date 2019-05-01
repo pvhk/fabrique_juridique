@@ -1,0 +1,156 @@
+
+{% extends "fabrique_juridique/global/header.html" %}
+{% load staticfiles%}
+
+
+{% block content%}
+    <section id="hero-home">
+        <div class="container">
+            <div class="container-left">
+                <div class="container-left-center">
+                    <h1>Vos démarches simplifiées</h1>
+                    <p class="subtitle">Qu’est-ce qu’une rupture conventionnelle ? De quel montant sont mes indemnités ?
+                        Comment démarrer une procédure ? Nous sommes là pour vous aider.</p>
+                    <div class="email-address">
+                    <form method="GET" action="http://localhost:8000/inscription" class="email-address">
+                        <input class="input input-gray" type="email" placeholder="Quelle est votre adresse email ?" name="emailnext"/>
+                        <button type="submit" class="btn btn-orange"><a>Commencer</a></button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+            <div class="container-right">
+                <img src="{%static 'fabrique_juridique/images/image-hero-home.png'%}" alt="image rupture conventionnelle">
+            </div>
+        </div>
+    </section>
+    <section id="avis">
+        <div class="container">
+            <div class="image-avis"><img src="{%static 'fabrique_juridique/images/photo profil Jean Pascal Montero.png'%}"
+                    alt="photo de profil de Jean-pascal Montero"></div>
+            <div class="avis-text">
+                <div class="nom-avis">
+                    <h3>Jean-Pascal Montero</h3>
+                    <span>Chef d’entreprise</span>
+                </div>
+                <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava
+                    bean
+                    collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="rupture-conventionnelle">
+        <div class="container">
+            <div class="container-left">
+                <h2>La rupture conventionnelle</h2>
+                <p class="subtitle">Une solution souvent méconnue</p>
+                <p>La rupture conventionnelle est une procédure qui permet à l’employeur et au salarié de convenir en
+                    commun des conditions de la rupture du contrat de travail qui les lie. Elle n’est possible que pour
+                    les contrats de travail à durée indéterminée (CDI). La rupture conventionnelle est exclusive du
+                    licenciement ou de la démission ; elle ne peut être imposée par l’une ou l’autre des parties.</p>
+                <p class="question-orange"><a href="">Quelle est la différence avec un licenciement ?</a></p>
+            </div>
+            <div class="container-right">
+                <div class="container-right-center">
+                    <p>Une augmentation de 10,7% du nombre de rupture signée en Octobre 2018*</p>
+                    <p>95% des ruptures conventionnelles sont validées par l’inspection du travail</p>
+                    <p>6 600€ : c’est le montant moyen des indemnités reçues par le salarié à l’issue de la rupture</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="avocats-conseillent">
+        <div class="container">
+            <div class="container-left">
+                <img src="{%static 'fabrique_juridique/images/contacter-avocat.png'%}" alt="des avocats qui conseillent">
+            </div>
+            <div class="container-right">
+                <h2>Des avocats qui vous conseillent</h2>
+                <p class="subtitle">Disponible 7 jours sur 7, 24h/24</p>
+                <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava
+                    bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko
+                    zucchini. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi fans
+                    dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini. </p>
+                <p class="question-orange"><a href="">Contacter un conseiller</a></p>
+            </div>
+            <div class="container-left-bis">
+                <img src="{%static 'fabrique_juridique/images/contacter-avocat.png'%}" alt="des avocats qui conseillent">
+            </div>
+        </div>
+    </section>
+    <section id="outil-gestion">
+        <div class="container">
+            <h2>Un outil de gestion simplifié pour les entreprises</h2>
+            <div class="outils">
+                <div class="outils-flex-desktop">
+                    <div class="outils-container">
+                        <div class="outils-flex">
+                            <div>
+                                <img src="{%static 'fabrique_juridique/images/icon_sign.png'%}" alt="signature électronique">
+                            </div>
+                            <h3>Signature électronique</h3>
+                        </div>
+                        <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi fans
+                            dandelion
+                            okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+                    </div>
+                    <div class="outils-container">
+                        <div class="outils-flex">
+                            <div>
+                                <img src="{%static 'fabrique_juridique/images/icon_mail.png'%}" alt="signature électronique">
+                            </div>
+                            <h3>Télétransmission des documents</h3>
+                        </div>
+                        <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi fans
+                            dandelion
+                            okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+                    </div>
+                    <div class="outils-container">
+                        <div class="outils-flex">
+                            <div>
+                                <img src="{%static 'fabrique_juridique/images/icon_calendar.png'%}" alt="signature électronique">
+                            </div>
+                            <h3>Calendrier et notifications</h3>
+                        </div>
+                        <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi fans
+                            dandelion
+                            okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini. </p>
+                    </div>
+                </div>
+                <div class="bouton-outils-gestion">
+                    <div class="savoir-plus btn btn-orange">En savoir plus
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="partenaires">
+        <div class="container">
+            <p class="subtitle">Ils sont nos partenaires</p>
+            <div class="image-partenaires"><img src="{%static 'fabrique_juridique/images/fabrique-juridique.png'%}" alt="nos partenaires"></div>
+            <div class="image-partenaires-2"><img src="{%static 'fabrique_juridique/images/fabrique-juridique.png'%}" alt="nos partenaires"></div>
+            <div class="image-partenaires-3"><img src="{%static 'fabrique_juridique/images/fabrique-juridique.png'%}" alt="nos partenaires"></div>
+        </div>
+    </section>
+    <section id="trouver-prestation">
+        <div class="container">
+            <h2>Trouvez la prestation qui correspond à vos besoins</h2>
+            <div class="container-prestation">
+                    <div class="email-address">
+                    <form method="GET" action="http://localhost:8000/inscription" class="email-address">
+                        <input class="input input-gray" type="email" placeholder="Quelle est votre adresse email ?" name="emailnext"/>
+                        <button type="submit" class="btn btn-orange"><a>Commencer</a></button>
+                    </form>
+                    </div>
+                <div class="questions-prestation">
+                    <p>Vous avez une question précise ?</p>
+                    <p class="question-orange">Envoyez-nous un message</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    {% endblock %}
+
+</html>
