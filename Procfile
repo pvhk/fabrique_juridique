@@ -1,1 +1,1 @@
-web: gunicorn fb.wsgi.application
+web: gunicorn fb.wsgi
