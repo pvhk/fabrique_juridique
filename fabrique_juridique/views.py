@@ -28,21 +28,27 @@ def connexion(request):
     else:
         return render(request,"fabrique_juridique/connexion.html",{"incorrect":"Identifiants incorrects !"})
 def create_user(request):
-    email = request.POST["email"]
-    first_name = request.POST["firstname"]
-    last_name = request.POST["lastname"]
-    username = first_name+last_name
-    password = request.POST["password"]
-    User.objects.create_user(username=username,email=email, password=password, first_name=first_name, last_name=last_name)
-    return redirect("/connexion")
+    try:
+        email = request.POST["email"]
+        first_name = request.POST["firstname"]
+        last_name = request.POST["lastname"]
+        username = first_name+last_name
+        password = request.POST["password"]
+        User.objects.create_user(username=username,email=email, password=password, first_name=first_name, last_name=last_name)
+        return redirect("/connexion")
+    except:
+        return redirect('/inscription')
 def calcul(request):
-    anciennete = float(request.POST["anciennete"])
-    average = float(request.POST["average"])
-    if anciennete > 10:
-        result = ((average * 1/4) * 10) + ((average * 1/3) * anciennete - 10)
-    else:
-        result = (average * 1/4) * anciennete
-    return render(request,'fabrique_juridique/global/mathieu.html', {"result":round(result,0),"average":round(average,0)})
+    try:
+        anciennete = float(request.POST["anciennete"])
+        average = float(request.POST["average"])
+        if anciennete > 10:
+            result = ((average * 1/4) * 10) + ((average * 1/3) * anciennete - 10)
+        else:
+            result = (average * 1/4) * anciennete
+        return render(request,'fabrique_juridique/global/mathieu.html', {"result":round(result,0),"average":round(average,0)})
+    except:
+        return render(request, 'fabrique_juridique/calculateur.html')
 def logout_user(request):
     logout(request)
     return redirect('/')

@@ -2,7 +2,7 @@
 {% load staticfiles%}
 {% block content%}
 
-        <div class="formWrap inscription" style="width:40%">
+        <div class="formWrap inscription" style="width:40%; margin-bottom:150px">
                 <h2>Connexion</h2>
                 <form action="{% url 'auth'%}" method="post">
                 {% csrf_token %}
