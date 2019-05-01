@@ -30,9 +30,11 @@ function handleDate(){
     var arr = new Array();
     var dt = new Date(startDateValue);
     while (dt <= endDateValue) {
+        console.log(dt)
         arr.push(new Date(dt));
         dt.setMonth(dt.getMonth() + 1);
     }
+    console.log(arr)
     return arr;
 }
 function createElementFromHTML(htmlString) {
@@ -46,8 +48,12 @@ function createNewPeriod(){
 function constructDatesHTML(dates){
     myHTML = document.createElement("div")
     myHTML.className = "calcul_form_input_ctnr calcul_form_margin"
-    processedDates = dates.slice(dates.length-12, dates.length)
-    console.log(processedDates)
+    if(dates.length > 12){
+        processedDates = dates.slice(dates.length-12, dates.length)
+    }
+    else {
+        processedDates = dates
+    }
     for(var i = 0; i < processedDates.length; i++){
         singleHTML = createHTMLSingle(processedDates[i])
         myHTML.innerHTML += singleHTML
@@ -74,15 +80,11 @@ function calcAverage(){
         total12months = total12months + parseInt(salaires[i].value)
     }
     var total3months = parseInt(salaires[salaires.length - 1].value) + parseInt(salaires[salaires.length - 2].value) + parseInt(salaires[salaires.length - 3].value)  + (montantPrimes.value && montantPrimes.value.length > 0 && parseInt(montantPrimes.value) != NaN ? parseInt(montantPrimes.value) : 0)
-    console.log(total12months)
-    console.log(total3months)
     average12 = total12months/nb_months
     average3 = total3months/3
     if(average12 > average3){
-        console.log("12")
         return average12
     } else {
-        console.log("3")
         return average3
     }
 }
@@ -101,6 +103,7 @@ function dateManage(){
     if(checkDates()){
         toInsertDates.innerHTML = ""
         allDates = handleDate()
+        console.log(allDates)
         ancienneteValue = allDates.length/12
         anciennete.value = ancienneteValue
         html_structure = constructDatesHTML(allDates)
