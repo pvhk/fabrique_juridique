@@ -1,1 +1,1 @@
-web: gunicorn fb:wsgi
+web: gunicorn mysite.config.settings.wsgi
