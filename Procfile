@@ -1,1 +1,1 @@
-web: gunicorn fb:app
+web: gunicorn fabrique_juridique:app
