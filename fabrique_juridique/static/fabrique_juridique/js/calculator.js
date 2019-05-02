@@ -34,7 +34,10 @@ function handleDate(){
         arr.push(new Date(dt));
         dt.setMonth(dt.getMonth() + 1);
     }
-    console.log(arr)
+    document.getElementById("alertfourchette").innerHTML = ""
+    if(arr.length < 4){
+        document.getElementById("alertfourchette").innerHTML = "Il faut prendre une fourchette de plus de 3 mois !"
+    }
     return arr;
 }
 function createElementFromHTML(htmlString) {
