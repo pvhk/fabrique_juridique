@@ -24,7 +24,7 @@ function checkDates(){
 
 function createHTMLSingle(date){
     var options = {year: 'numeric', month: 'long' };
-    return '<div class="calcul_form_mois calcul_form_margin"><p>'+ date.toLocaleDateString('fr-FR', options) + '</p><div class="input_euro_ctnr"><input class="calcul_form_input" type="number"><p>euros</p></div></div>'
+    return '<div class="calcul_form_mois calcul_form_margin"><p>'+ date.toLocaleDateString('fr-FR', options) + '</p><div class="input_euro_ctnr"><input class="calcul_form_input" type="number" required><p>euros</p></div></div>'
 }
 function handleDate(){
     var arr = new Array();

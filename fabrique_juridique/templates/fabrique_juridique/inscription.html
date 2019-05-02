@@ -33,33 +33,33 @@
                     <div class="divider">
                         <div class="miniWrapper nomWrapper">
                             <label for="nom">Nom</label>
-                            <input class="input input-gray" type="text" name="lastname" id="Nom">
+                            <input class="input input-gray" type="text" name="lastname" id="Nom" pattern=".{3,20}" required>
                         </div>
                         <div class="miniWrapper prenomWrapper">
                             <label for="prenom">Prénom</label>
-                            <input class="input input-gray" type="text" name="firstname" id="prenom">
+                            <input class="input input-gray" type="text" name="firstname" id="prenom" pattern=".{2,20}" required>
                         </div>
                     </div>
                     <div class="divider">
                         <div class="miniWrapper telWrapper">
                             <label for="tel">Téléphone</label>
-                            <input class="input input-gray" type="tel" id="tel">
+                            <input class="input input-gray" type="tel" id="tel" required>
 
                         </div>
                         <div class="miniWrapper secteurWrapper">
                             <label for="secteur">Secteur</label>
-                            <input class="input input-gray" type="text" id="secteur">
+                            <input class="input input-gray" type="text" id="secteur" pattern=".{2,30}" required>
                         </div>
                     </div>
                     <label for="mail">Email professionnel</label>
                     {% if emailnext is not None%}                    
-                    <input class="input input-gray" type="email" name="email" id="mail" value="{{emailnext}}">
+                    <input class="input input-gray" type="email" name="email" id="mail" value="{{emailnext}}" required>
                     {% else %} 
-                    <input class="input input-gray" type="email" name="email" id="mail">
+                    <input class="input input-gray" type="email" name="email" id="mail" required>
                     {% endif %} 
                     <label for="pass">Mot de passe</label>
                     <div class="input-img">
-                        <input class="input input-gray" type="password" name="password" id="pass">
+                        <input class="input input-gray" type="password" name="password" pattern=".{6,20}" id="pass">
                         <div class="password">
                             <span class="fas fa-eye"></span>
                         </div>
